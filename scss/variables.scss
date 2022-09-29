@@ -1,0 +1,55 @@
+//EN ESTE ARCHIVO SE AGREGAN LAS VARIABLES
+
+//VARIABLES DE LA MARCA
+
+$color-primary: #ee7bc8; //color primario de la marca 
+$color-secondary: #ee0896ea;  //color secudario de la marca 
+$color-third:white;
+$color-fourth:#9e13c934;
+
+// A partir de un mapa genero clases de colores de la marca en HTML para el color del contenedor.
+
+$color-map:(
+    primary: #ee7bc8, //color primario de la marca 
+    secondary: #abb1b8,  //color secudario de la marca 9e13c934
+    third:white,
+    fourth:#9e13c934,
+    fifth:black,
+);
+
+@each $posicion-color, $color in $color-map {
+    .color-#{$posicion-color}{
+        color:$color;
+    }
+}
+
+// A partir de un mapa genero clases de colores de la marca en HTML para el background-color del contenedor.
+
+$background-color-map:(
+    primary: #ee7bc8, //color primario de la marca 
+    secondary: #ee0896ea,  //color secudario de la marca 
+    third:white,
+    fourth:#9e13c934,
+);
+
+@each $posicion-color, $color in $background-color-map {
+    .bg-color-#{$posicion-color}{
+        background-color: $color;
+    }
+}
+
+// Mixin
+
+@mixin size($height,$width,$padding,$margin){
+    height: $height;
+    width: $width;
+    padding: $padding;
+    margin: $margin;
+}
+
+.boton{
+    margin: 5px;
+    background-color: $color-primary;
+}
+
+$font-style-brand: Raleway;
